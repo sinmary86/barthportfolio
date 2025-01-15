@@ -1,0 +1,871 @@
+  
+body {
+  font-family: "Roboto", serif;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2a2360;
+    background-image: url("./mainCover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+  }
+
+  #startseite, #about, #portfolio, #kontakten {
+    height: auto;
+    min-height: 100vh;
+  }
+
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 3vw 5vw;
+  }
+
+  .animated-heading {
+    font-family: "Poppins", serif;
+    font-size: 30px;
+    font-weight: 600;
+    overflow: hidden; /* Скрыть текст, который выходит за пределы */
+    white-space: nowrap; /* Запрещает перенос строки */
+    display: inline-block; /* Для корректной работы с white-space */
+    position: relative; /* Для работы с псевдо-элементом курсора */
+  }
+  
+  .dark {
+    color: #3b254d;
+  }
+  
+  .dark::after {
+    content: ''; /* Создаем пустой псевдо-элемент */
+    position: absolute;
+    right: 0; /* Курсор будет находиться справа от текста */
+    top: 0;
+    width: 2px;
+    height: 100%; /* Делаем курсор высотой по размеру текста */
+    background-color: #3b254d; /* Цвет курсора для primary */
+    animation: blink 0.7s step-end infinite; /* Мигающий эффект */
+  }
+  
+  .light {
+    color: #fff1ff;
+  }
+  
+  .light::after {
+    content: ''; /* Создаем пустой псевдо-элемент */
+    position: absolute;
+    right: 0; /* Курсор будет находиться справа от текста */
+    top: 0;
+    width: 2px;
+    height: 100%; /* Делаем курсор высотой по размеру текста */
+    background-color: #fff1ff; /* Цвет курсора для secondary */
+    animation: blink 0.7s step-end infinite; /* Мигающий эффект */
+  }
+  
+  
+  /* Анимация мигающего курсора */
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+/*MENU*/
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.navbar {
+  position: relative;
+  background: transparent !important;
+}
+
+.navbar__wrap {
+  display: flex;
+  justify-content: flex-start; /* Выравнивание влево */
+  align-items: center;
+}
+
+.hamb {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+.menu > li > a {
+  text-decoration: none;
+}
+
+.navbar__wrap .menu {
+  display: flex;
+}
+
+.navbar__wrap .menu > li {
+  display: flex;
+}
+
+.navbar__wrap .menu > li > a {
+  display: flex;
+  margin-right: 100px;
+  color: #fff1ff;
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.navbar__wrap .menu > li > a:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+/*STARTSEITE*/
+
+.mainTextContainer{
+  text-align: left;
+  color: #fff1ff;
+  padding-top: 10vw;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: "Poppins", serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.rotating-title {
+  display: inline-block;
+  transform-origin: center center; /* Вращение происходит относительно центра элемента */
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.btnOpenModel {
+  box-shadow: 0px 4px 15px rgba(157, 57, 150, 0.4), 0 0 10px rgba(111, 66, 193, 0.6);
+  padding: 10px 20px;
+  color: #fff1ff;
+  background-color: transparent;
+  font-size: 20px;
+  border-radius: 10px;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnOpenModel:hover {
+    background-color: rgba(211, 110, 249, 0.7);
+    box-shadow: 0px 4px 20px rgba(111, 66, 193, 0.6), 0 0 15px rgba(157, 57, 150, 0.8); /* Усиление свечения */
+    transform: translateY(-3px); /* Лёгкий подъём при наведении */
+  }
+  
+.btnOpenModel:active {
+    transform: translateY(1px); /* При нажатии кнопка опускается */
+    box-shadow: 0px 4px 10px rgba(111, 66, 193, 0.4), 0 0 8px rgba(157, 57, 150, 0.6); /* Ослабление свечения */
+  }
+
+  /* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  top: 50%; /* Центрируем по вертикали */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%); /* Сдвиг для идеального центрирования */
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff1ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  font-size: 16px;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 20px; 
+  text-transform: uppercase;
+  font-family: "Poppins", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3b254d; 
+}
+
+.close {
+  font-size: 24px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  color: #3b254d;
+}
+
+.close:hover {
+  transform: scale(1.2);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #3b254d;
+}
+
+form input, form textarea, form button {
+  width: 90%;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: #241236;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: auto;
+}
+
+form button:hover {
+  background-color: #3d205b;
+}
+
+.contact-icons {
+  gap: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 13vw;
+}
+
+.contact-icons .icon {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px; 
+  transition: transform 0.3s ease, color 0.3s ease; /* Анимация */
+}
+
+.contact-icons .icon:hover {
+  transform: scale(1.2);
+}
+
+/*ABOUT*/
+.containerAbout, .containerKontakten {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vw 8vw;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: "Poppins", serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #3b254d;
+  padding-bottom: 10px;
+}
+
+.aboutText {
+  color: #3b254d;
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 60%;
+  line-height: 1.5;
+}
+
+.aboutText p {
+  padding-bottom: 10px;
+}
+
+.containerImgAbout {
+  position: relative;
+  width: 300px; 
+  height: 300px; 
+  align-items: center; 
+  max-width: 30%;
+  align-self: center;
+}
+
+.image-container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.aboutImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.icons-container {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Даем контейнеру всю ширину изображения */
+  height: 100%;
+  pointer-events: none; /* Иконки не будут блокировать клики по изображению */
+}
+
+.icons-container i {
+  position: absolute;
+  width: 50px; 
+  height: 50px; 
+  background-color: #5b2f9a; 
+  color: #fff1ff; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; 
+  transform-origin: center center;
+  pointer-events: auto;
+  transition: transform 0.3s ease; 
+}
+
+.btn-download {
+  box-shadow: 0px 4px 4px rgba(157, 57, 150, 0.193);
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #5b2f9a; 
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.btn-download:hover {
+  background-color: #9575cd;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*PROJEKTE*/
+ 
+#portfolio {
+  background-image: url(imgPortfolio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4vw 5vw;
+  position: relative; /* Для дополнительного контроля вложенных элементов */
+  z-index: 1;
+  min-height: 100vh; /* Высота секции на весь экран */
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3vw;
+  width: 100%;
+}
+
+  .containerProjekt {
+    width: 320px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+  }
+  
+  .containerProjekt:hover {
+    transform: rotateY(180deg); /* Эффект переворота */
+  }
+  
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Скрытие задней стороны */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(15, 13, 13, 0.4);
+  }
+  
+  .front {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .front .inner {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex; /* Включаем flexbox для центрирования содержимого */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .back {
+    background: linear-gradient(90deg, #5b2f9a, #aa66e2);
+    transform: rotateY(180deg); /* Задняя сторона для переворота */
+  }
+
+  .inner {
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+    filter: brightness(1); 
+  }
+  
+  .inner p {
+    margin: 10px 0;
+    font-family: "Poppins", serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+    filter: brightness(1); 
+  }  
+
+  .inner span {
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    color: #fff1ff;
+  }  
+
+  .projLink {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.6), 0px 0px 10px rgba(255, 255, 255, 0.8);
+    background-color: #6f42c1; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto", serif;
+    font-size: 16px;
+  }
+
+  .projLink:hover {
+    background-color: #9575cd;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.8), 0px 0px 15px rgba(255, 255, 255, 1);
+  }
+ 
+  #kontakten {
+    background-color: #fff;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .containerKontakten {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    padding: 4vw 5vw;
+  }
+  
+  .containerKontakten p {
+    color: #3b254d;
+    transition: color 0.3s ease;
+    font-family: "Roboto", serif;
+    font-size: 16px;
+  }
+
+  .meineKontakte {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .meineKontakte p {
+    font-size: 1rem;
+    color: #3b254d;
+    margin-bottom: 10px;
+  }
+  
+  .meineKontakte button, h5 {
+    margin-top: 20px;
+  }
+
+  .symbolContacts {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .symbolContacts a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #3b254d;
+    transition: color 0.3s ease;
+  }
+  
+  .symbolContacts a:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .symbol {
+    padding: 10px 0px;
+    text-align: left;
+  }
+
+  .symbol a {
+    text-decoration: none;
+    color: #3b254d;
+    transition: color 0.3s ease;
+    font-family: "Roboto", serif;
+    font-size: 16px;
+  }
+
+  .symbol p {
+    color: #3b254d;
+    transition: color 0.3s ease;
+    font-family: "Roboto", serif;
+    font-size: 16px;
+  }
+
+  .kontaktImg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .kontaktImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  h5 {
+    text-align: center;
+    margin-bottom: 30px; 
+    font-family: "Poppins", serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3b254d;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #241236;
+    color: #fff;
+    font-family: "Roboto", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .mainTextContainer{
+      padding-top: 15vw;
+    }
+
+    .contact-icons {
+      padding-top: 20vw;
+    }
+
+    .containerAbout {
+      flex-direction: column;
+      justify-content: center;
+      padding: 15vw 1vw 8vw 1vw;
+      gap: 100px;
+    }
+  
+    .aboutText {
+      font-size: 16px;
+    }
+ 
+    .aboutText {
+      max-width: 80%;
+      line-height: 1.4;
+    }
+    
+    .containerImgAbout {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main {
+  padding: 7vw 10vh;
+}
+
+    .navbar__wrap .menu {
+      display: none;
+    }
+  
+    .hamb {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .hamb__field {
+      cursor: pointer;
+    }
+  
+    .bar {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 6px auto;
+      background-color: #fff;
+      transition: 0.2s;
+    }
+  
+    .popup {
+      position: fixed;
+      top: 75px;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(59, 37, 77, 0.95);
+      z-index: 100;
+      display: flex;
+      transition: 0.3s;
+    }
+  
+    .popup.open {
+      left: 0;
+    }
+  
+    .popup .menu {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 50px 0;
+      overflow: auto;
+    }
+  
+    .popup .menu > li {
+      width: 100%;
+    }
+  
+    .popup .menu > li > a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff1ff;
+    }
+  
+    .popup .menu > li > a:hover {
+      background-color: #aa66e2;
+    }
+  
+    .hamb__field.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamb__field.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamb__field.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    body.noscroll {
+      overflow: hidden;
+    }
+    
+    .mainTextContainer{
+      padding-top: 15vw;
+    }
+
+    .contact-icons {
+      padding-top: 10vw;
+    }
+
+    .contact-icons {
+      gap: 30px;
+      padding-top: 20vw;
+    }
+
+    #portfolio {
+      padding: 2vw 3vw; 
+    }
+  
+    .content {
+      max-width: 100%;
+      padding: 0 10px; /* Добавляем отступы для контента */
+    }
+  
+    .slider {
+      max-width: 100%;
+    }
+
+    .containerProjekt {
+      height: 250px;
+    }
+  
+    .stackUsed {
+      font-size: 0.8rem;
+    }
+  
+    .projLink {
+      font-size: 0.8rem;
+      padding: 8px 15px;
+    }
+
+    .meineKontakte, .kontaktModel {
+    flex: 1 1 100%; /* На маленьких экранах элементы занимают 100% */
+  }
+  }
+  
+  @media (max-width: 480px) {
+      .mainTextContainer{
+      padding-top: 35vw;
+    }
+
+    .contact-icons {
+      gap: 25px;
+      padding-top: 32vw;
+    }
+
+    .containerAbout {
+      padding: 20vw 4vw 8vw 4vw;
+      gap: 200px;
+    }
+  
+   
+    .aboutText {
+      max-width: 80%;
+      line-height: 1.2;
+    }
+    
+    .containerImgAbout {
+      width: 200px; /* Размер картинки */
+      height: 200px; /* Высота картинки */
+    }
+
+   
+    
+    .icons-container {
+      top: 90%;
+      left: 90%;
+      width: 100%; /* Даем контейнеру всю ширину изображения */
+      height: 100%;
+    }
+    
+    .icons-container i {
+      position: absolute;
+      width: 35px; 
+      height: 35px; 
+      font-size: 24px; 
+    }
+    
+    .containerProjekt {
+      height: 200px;
+    }
+  
+    .projLink {
+      font-size: 0.7rem;
+      padding: 5px 10px;
+    }
+  }
+
+  @media (max-width: 370px) {
+    .mainTextContainer{
+      padding-top: 46vw;
+    }
+
+    .contact-icons {
+      gap: 20px;
+      padding-top: 42vw;
+    }
+    
+    .mainTextContainer h1 {
+      font-size: 2rem; /* Еще меньше размер заголовка */
+    }
+  
+    .mainTextContainer h2 {
+      font-size: 1.1rem; /* Уменьшаем подзаголовок */
+    }
+  
+    .btnOpenModel {
+      padding: 8px 16px; /* Уменьшаем кнопку */
+      font-size: 0.8rem;
+    }
+ 
+    .contact-icons .icon {
+      font-size: 1.2rem; /* Уменьшаем размер иконок еще больше */
+    }
+  
+    .icons-container i {
+      width: 35px;
+      height: 35px;
+      font-size: 16px;
+    }  
+
+    h1 {
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+    
+    h2 {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    h3 {
+      font-size: 13px;
+      letter-spacing: normal;
+    }
+  }

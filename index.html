@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Barth</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div id="particles-js"></div>
+
+<section id="startseite" class="navNbc">
+    <div class="main">
+
+   <!-- Navigation -->
+   <nav class="navbar">
+    <div class="container">
+      <div class="navbar__wrap">
+        <div class="hamb">
+          <div class="hamb__field" id="hamb">
+            <span class="bar"></span> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+        
+        <ul class="menu" id="menu">
+          <li><a href="#">Startseite</a></li>
+          <li><a href="#about">Über mich</a></li>
+          <li><a href="#portfolio">Meine Projekte</a></li>
+          <li><a href="#kontakten">Kontakten</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="popup" id="popup"></div>
+
+    <!--TEXT MAINPAGE-->
+
+    <div class="mainTextContainer">
+        <h1 class="rotating-title">&lt;Maria Barth /&gt;</h1>
+        <h2></h2>
+        <div>
+          <button class="btnOpenModel" id="openModal1">
+            Kontaktiere mich 
+            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.8986 8.60457C21.2892 8.21404 21.2892 7.58088 20.8986 7.19035L14.5347 0.826393C14.1441 0.435869 13.511 0.435869 13.1205 0.826393C12.7299 1.21692 12.7299 1.85008 13.1205 2.24061L18.7773 7.89746L13.1205 13.5543C12.7299 13.9448 12.7299 14.578 13.1205 14.9685C13.511 15.3591 14.1441 15.3591 14.5347 14.9685L20.8986 8.60457ZM0.191528 8.89746L20.1915 8.89746V6.89746L0.191528 6.89746L0.191528 8.89746Z" fill="white"></path></svg>
+          </button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h4>Kontaktformular</h4>
+
+    <form id="contactForm"  action="https://formspree.io/f/mvggqpok" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <!-- Hidden Inputs for FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+      <button type="submit" class="submit-btn">Senden</button>
+    </form>
+  </div>
+</div>
+
+<div class="contact-icons">
+    <a href="mailto:example@example.com" target="_blank" aria-label="Email" class="icon email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp" class="icon whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+123456789" aria-label="Phone" class="icon phone">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://t.me/username" target="_blank" aria-label="Telegram" class="icon telegram">
+      <i class="fab fa-telegram"></i>
+    </a>
+  </div>
+
+    </div>
+</section>
+
+
+    <!--ABOUT-->
+
+    <section id="about">
+    <div class="containerAbout">
+
+        <div class="containerImgAbout">
+          <div class="image-container">
+            <img src="llustrationForAbout.jpg" alt="Image einer Programmiererin mit Laptop" class="aboutImg" loading="lazy">
+          </div>
+          <div class="icons-container">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-bootstrap"></i>
+            <i class="fa-brands fa-figma"></i>
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-node"></i>
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-wordpress"></i>    
+          </div>
+        </div>
+    
+        <div class="aboutText">
+            <h3 class="animated-heading dark">&lt;Über mich/&gt;</h3>
+            <p>Hallo alle zusammen! Mein Name ist Maria, und ich bin eine angehende, aber leidenschaftliche Programmiererin.</p>
+            <p> Noch vor ein paar Jahren habe ich als Juristin in einem großen Handelsunternehmen gearbeitet. Klingt verrückt, oder? Unsere Abteilung war ständig überlastet – von der Vertragsprüfung bis zu Gerichtsverfahren war alles dabei. Das Arbeitspensum war riesig, und die Zeit schien nie auszureichen.
+    
+                So begann meine Reise in die Welt von LegalTech. Um Prozesse im Unternehmen zu optimieren und zu automatisieren, habe ich begonnen, mich in die IT einzuarbeiten. Dabei wurde mir schnell klar: Je tiefer ich in die Programmierung eintauchte, desto mehr faszinierte sie mich – und desto weniger interessierte mich das Recht.
+                
+                Wo meine juristischen Kollegen rechtliche Normen sahen, entwickelte sich in meinem Kopf die Logik eines Codes. </p>
+                <p>Doch meine anfänglichen Kenntnisse aus dem Internet reichten bald nicht mehr aus. Um mein Wissen zu strukturieren und zu vertiefen, habe ich eine Ausbildung bei der Schule „CanSheCode“ begonnen.
+                
+                Dort habe ich JavaScript und darauf basierende Technologien wie React, Node.js, Redux und TypeScript erlernt. Derzeit beschäftige ich mich mit Flutter, um auch Apps entwickeln zu können.
+                
+                Die Welt der Programmierung hat mich vollständig in ihren Bann gezogen: Die Möglichkeit, Tools zu schaffen, die das Leben erleichtern, Prozesse optimieren und die Arbeit effizienter machen, begeistert mich jeden Tag aufs Neue. </p>
+                
+                <p> Heute entwickle ich Websites und Anwendungen, die nicht nur optisch überzeugen, sondern auch leistungsstarke Werkzeuge für Ihre Ziele sind. Ob eine stilvolle digitale Visitenkarte für Ihr Unternehmen oder eine funktionale Plattform für aktiven Verkauf – ich bringe Ihre Ideen zum Leben.
+                
+                Dank meiner juristischen Erfahrung habe ich ein umfassendes Verständnis für Geschäftsanforderungen. In Kombination mit meiner Begeisterung für Programmierung finde ich elegante und effiziente technische Lösungen.
+                </p>
+    
+                <p>Lassen Sie uns gemeinsam etwas Großartiges schaffen!</p>
+        
+            <button class="btn-download" id="downloadButton">Lebenslauf herunterladen</button>
+          </div>
+       
+
+      </div>
+      </section>
+
+
+        <!--PORTFOLIO-->
+        <section id="portfolio">
+          <div class="galery">
+
+          <div class="title">
+            <h3 class="animated-heading light">&lt;Meine Projekte /&gt;</h3>
+          </div>
+
+          <div class="content">
+            <div class="slider lazy">
+
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('blumenladen.png')">
+                    <div class="inner">
+                      <p>Blumen Laden</p>
+                      <span>Website</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / React </p>
+                      <a class="projLink" href="bergena.netlify.app" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('anwalt.png')">
+                    <div class="inner">
+                      <p>Anwalt</p>
+                      <span>Website</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / JS </p>
+                      <a class="projLink" href="https://advocatsiniakov.netlify.app/" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('workspace.jpg')">
+                    <div class="inner">
+                      <p>Anspruchsberechnung</p>
+                      <span>Website</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / React </p>
+                      <a class="projLink" href="https://claim-imgrupp.netlify.app/" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2luZ2FwdXJ8ZW58MHx8MHx8fDI%3D')">
+                    <div class="inner">
+                      <p>Reiseportal</p>
+                      <span>Website</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / JS </p>
+                      <a class="projLink" href="https://reiseportal.glitch.me" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('delizia.png')">
+                    <div class="inner">
+                      <p>Restaurant Delizia</p>
+                      <span>Website</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS </p>
+                      <a class="projLink" href="italienrestaurantdelizia.netlify.app" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('https://img.freepik.com/premium-photo/learning-languages-concept-blackboard-with-text-learn-german-flag-germany-books-chancellery_656538-3309.jpg?uid=P140427871&ga=GA1.1.305859888.1699036037&semt=ais_hybrid')">
+                    <div class="inner">
+                      <p>Deutsch online</p>
+                      <span>Website</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / Bootstrap</p>
+                      <a class="projLink" href="deutschonlineschule.netlify.app" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url(billApp.png)">
+                    <div class="inner">
+                      <p>Let's Split Our Bill!</p>
+                      <span>App</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / JS </p>
+                      <a class="projLink" href="" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url(einkaufslisteApp.png)">
+                    <div class="inner">
+                      <p>Einkaufsliste</p>
+                      <span>App</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p>HTML / CSS / JS </p>
+                      <a class="projLink" href="" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('https://images.unsplash.com/photo-1587923623987-c7e4083beb23?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHN1bnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')">
+                    <div class="inner">
+                      <p>Weather forecast</p>
+                      <span>App</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / JS </p>
+                      <a class="projLink" href="https://weatherforecasteng.glitch.me" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('https://images.unsplash.com/photo-1581515092908-42bae9a80350?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFyZW5pa2l8ZW58MHx8MHx8fDI%3D')">
+                    <div class="inner">
+                      <p>Köstliche Rezepte</p>
+                      <span>Website</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / JS </p>
+                      <a class="projLink" href="https://kostlicherezepte.glitch.me" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url(test.jpg)">
+                    <div class="inner">
+                      <p>Einbürgerungstest</p>
+                      <span>App</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / JS </p>
+                      <a class="projLink" href="https://einbuergerungstest.glitch.me" target="_blank">Mehr erfahren</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="containerProjekt">
+                  <div class="front" style="background-image: url('https://images.unsplash.com/photo-1603793303277-ed67787545e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FudGF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')">
+                    <div class="inner">
+                      <p>Adventskalender</p>
+                      <span>App</span>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="inner">
+                      <p class="stackUsed">HTML / CSS / JS </p>
+                      <a class="projLink" href="https://adventskalender2024.glitch.me/" target="_blank">Zum</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+
+          </div>
+          </div>
+        </div>
+        </section>
+    
+         
+    
+        <section id="kontakten">
+  
+    <div class="containerKontakten">
+
+        <div class="meineKontakte">
+          <div class="title">
+              <h3 class="animated-heading dark">&lt;Meine Kontakten/&gt;</h3>
+            </div>
+          
+            <div class="symbol">
+            <p>
+              <i class="fa-solid fa-envelope"></i> 
+              E-mail: 
+              <a href="mailto:mariia.barth@web.de" target="_blank" aria-label="Email">
+                mariia.barth@web.de
+              </a>
+            </p>
+            
+            <p>
+              <i class="fa-solid fa-phone"></i> 
+              Nummer: 
+              <a href="tel:+49123456789" aria-label="Phone">
+                +49123456789
+              </a>
+            </p>
+         
+
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 
+              Adresse: 
+              <a href="https://www.google.com/maps?q=73072+Donzdorf" target="_blank" aria-label="Google Maps">
+                73072, Donzdorf
+              </a>
+            </p>
+        </div>
+
+            <h5>Mehr über mich und meine Projekten:</h5>
+              <div class="symbolContacts">
+                <a href="https://github.com/sinmary86" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="www.linkedin.com/in/mariia-barth-847972288" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+
+              <h5>Haben Sie noch Fragen?</h5>
+              <p>Schreib mir einfach eine Nachricht 
+              <br>und ich melde mich innerhalb der nächsten 48 Stunden</p>
+
+              <div>
+                <button class="btn-download" id="openModal2">
+                  Kontaktiere mich
+                </button>
+              </div>
+      
+      
+          <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal" class="close">&times;</span>
+          <h4>Kontaktformular</h4>
+      
+          <form id="contactForm"  action="https://formspree.io/f/mvggqpok" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+      
+            <!-- Hidden Inputs for FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+      
+            <button type="submit" class="submit-btn">Senden</button>
+          </form>
+        </div>
+      </div>       
+    
+    </div>
+        
+
+          <div class="kontaktImg">
+              <img src="imgKontakten.jpg" alt="computer" />
+          </div>
+
+    </div>
+    
+    <footer>
+      <p>&copy; 2024 Maria Barth</p>
+    </footer> 
+    
+</section>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+
+<!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Email.js -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Ваш пользовательский скрипт -->
+<script src="script.js"></script>
+
+</body>
+</html>
