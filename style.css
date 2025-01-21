@@ -385,9 +385,9 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   padding: 4vw 5vw;
-  position: relative; /* Для дополнительного контроля вложенных элементов */
+  position: relative; 
   z-index: 1;
-  min-height: 100vh; /* Высота секции на весь экран */
+  min-height: 100vh; 
 }
 
 .content {
@@ -410,6 +410,20 @@ h3 {
     transform: rotateY(180deg); /* Эффект переворота */
   }
   
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    z-index: 1; 
+  }
+  
+  .containerProjekt:hover .back {
+    z-index: 2;
+  }
+  
+  .back .inner a {
+    pointer-events: auto; /* Включает взаимодействие для ссылки */
+  }
+  
   .front, .back {
     position: absolute;
     width: 100%;
@@ -429,11 +443,11 @@ h3 {
   }
   
   .front .inner {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
     text-align: center;
-    display: flex; /* Включаем flexbox для центрирования содержимого */
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -744,7 +758,7 @@ h3 {
   
     .content {
       max-width: 100%;
-      padding: 0 10px; /* Добавляем отступы для контента */
+      padding: 0 10px; 
     }
   
     .slider {
@@ -765,7 +779,7 @@ h3 {
     }
 
     .meineKontakte, .kontaktModel {
-    flex: 1 1 100%; /* На маленьких экранах элементы занимают 100% */
+    flex: 1 1 100%; 
   }
   }
   
@@ -791,16 +805,14 @@ h3 {
     }
     
     .containerImgAbout {
-      width: 200px; /* Размер картинки */
-      height: 200px; /* Высота картинки */
+      width: 200px; 
+      height: 200px; 
     }
-
-   
     
     .icons-container {
       top: 90%;
       left: 90%;
-      width: 100%; /* Даем контейнеру всю ширину изображения */
+      width: 100%; 
       height: 100%;
     }
     
@@ -832,20 +844,20 @@ h3 {
     }
     
     .mainTextContainer h1 {
-      font-size: 2rem; /* Еще меньше размер заголовка */
+      font-size: 2rem; 
     }
   
     .mainTextContainer h2 {
-      font-size: 1.1rem; /* Уменьшаем подзаголовок */
+      font-size: 1.1rem; 
     }
   
     .btnOpenModel {
-      padding: 8px 16px; /* Уменьшаем кнопку */
+      padding: 8px 16px;
       font-size: 0.8rem;
     }
  
     .contact-icons .icon {
-      font-size: 1.2rem; /* Уменьшаем размер иконок еще больше */
+      font-size: 1.2rem; 
     }
   
     .icons-container i {
