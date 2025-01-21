@@ -17,7 +17,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #2a2360;
-    background-image: url("./mainCover.png");
+    background-image: url("./assets/mainCover.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -380,7 +380,7 @@ h3 {
 /*PROJEKTE*/
  
 #portfolio {
-  background-image: url(imgPortfolio.jpg);
+  background-image: url('./assets/imgPortfolio.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -516,7 +516,6 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
     padding: 4vw 5vw;
   }
   
@@ -778,19 +777,32 @@ h3 {
       padding: 8px 15px;
     }
 
-    .meineKontakte, .kontaktModel {
-    flex: 1 1 100%; 
-  }
+    .containerKontakten {
+      flex-direction: column; 
+    }
+  
+    .meineKontakte, .kontaktImg {
+      flex: 1 1 100%; 
+      padding: 10px;
+    }
   }
   
   @media (max-width: 480px) {
       .mainTextContainer{
-      padding-top: 35vw;
+      padding-top: 32vw;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h2 {
+      letter-spacing: 2px;
     }
 
     .contact-icons {
       gap: 25px;
-      padding-top: 32vw;
+      padding-top: 35vw;
     }
 
     .containerAbout {
@@ -798,7 +810,6 @@ h3 {
       gap: 200px;
     }
   
-   
     .aboutText {
       max-width: 80%;
       line-height: 1.2;
